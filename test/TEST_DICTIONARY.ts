@@ -2142,6 +2142,7 @@ const TEST_DICTIONARY = {
   na6: 'ycsA',
   na7: 'yRI0',
   navbar: 'UfiF',
+  navigation: 'ZFgu',
   navs: 'hKDe',
   navy: 'zEdP',
   nb1: 'pzhF',

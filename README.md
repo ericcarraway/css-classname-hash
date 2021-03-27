@@ -2,6 +2,15 @@
 
 `css-classname-hash` is an opinionated string hashing function for minifying CSS class names in Node.js, intended for use in front-end build systems.
 
+```js
+// npm i --save-dev @ericcarraway/css-classname-hash
+const hashClassName = require('@ericcarraway/css-classname-hash').default;
+
+console.log(hashClassName('container')); // Xwtu
+console.log(hashClassName('header')); // CZ5l
+console.log(hashClassName('navigation')); // ZFgu
+```
+
 **DETAILS**
 
 1. Creates a base64-encoded md5 hash using Node's built-in `crypto` module

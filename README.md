@@ -14,3 +14,7 @@
     - Has at least one lower case letter
     - Has at least one upper case letter
     - Is four characters long
+
+---
+
+Bootstrapped with [TSDX](https://github.com/formium/tsdx)

@@ -11,10 +11,11 @@ npm i --save-dev @ericcarraway/css-classname-hash
 **USAGE**
 
 ```js
+// note the `.default`
 const hashClassName = require('@ericcarraway/css-classname-hash').default;
 
 // an example BEM class name
-hashClassNam('block-name__elem-name_mod-name_mod-val') // 'YMpS',
+hashClassName('block-name__elem-name_mod-name_mod-val') // 'YMpS'
 
 // other examples
 hashClassName('container') // 'Xwtu'

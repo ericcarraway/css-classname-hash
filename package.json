@@ -11,14 +11,16 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "analyze": "size-limit --why",
     "build": "tsdx build",
-    "test": "tsdx test",
     "clear_jest": "jest --clearCache",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
+    "pre-publish": "bash scripts/pre-publish.sh",
+    "shipit": "bash scripts/publish.sh",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "start": "tsdx watch",
+    "test": "tsdx test"
   },
   "peerDependencies": {},
   "husky": {

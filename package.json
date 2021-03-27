@@ -1,5 +1,8 @@
 {
+  "name": "@ericcarraway/css-classname-hash",
+  "author": "Eric Carraway",
   "version": "0.0.0",
+  "description": "opinionated string hashing function for minifying CSS class names in Node.js, intended for use in front-end build systems",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -34,8 +37,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@ericcarraway/css-classname-hash",
-  "author": "Eric Carraway",
   "module": "dist/css-classname-hash.esm.js",
   "size-limit": [
     {

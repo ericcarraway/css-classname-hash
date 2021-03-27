@@ -290,6 +290,7 @@ const TEST_DICTIONARY = {
   'black-70': 'Ll3y',
   'black-80': 'jASZ',
   'black-90': 'nEwt',
+  'block-name__elem-name_mod-name_mod-val': 'YMpS',
   'blockquote-footer': 'qmpU',
   'blockquote-reverse': 'bzQJ',
   'bn-l': 'eMNG',

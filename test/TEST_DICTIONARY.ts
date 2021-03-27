@@ -1,4 +1,4 @@
-const testDictionary = {
+const TEST_DICTIONARY = {
   'absolute--fill-l': 'Pmwt',
   'absolute--fill-m': 'lxmC',
   'absolute--fill-ns': 'F8k8',
@@ -2282,4 +2282,4 @@ const testDictionary = {
   yellow: 'IfdC',
 };
 
-export default testDictionary;
+export default TEST_DICTIONARY;

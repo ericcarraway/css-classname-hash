@@ -55,5 +55,13 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericcarraway/css-classname-hash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericcarraway/css-classname-hash/issues"
+  },
+  "homepage": "https://github.com/ericcarraway/css-classname-hash#readme"
 }

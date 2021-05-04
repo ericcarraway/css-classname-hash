@@ -1,60 +1,61 @@
 {
   "name": "@ericcarraway/css-classname-hash",
   "author": "Eric Carraway",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "opinionated string hashing function for minifying CSS class names in Node.js, intended for use in front-end build systems",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "analyze": "size-limit --why",
-    "build": "tsdx build",
+    "build": "bash scripts/build.sh",
     "clear_jest": "jest --clearCache",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "lint": "echo TODO: re-enable linting",
     "pre-publish": "bash scripts/pre-publish.sh",
+    "prettier": "prettier \"./**/*.{ts,js}\" --write",
     "shipit": "bash scripts/publish.sh",
     "size": "size-limit",
-    "start": "tsdx watch",
-    "test": "tsdx test"
+    "test": "npx jest"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "npm run lint && npm run test"
     }
   },
   "prettier": {
     "printWidth": 80,
+    "quoteProps": "consistent",
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all"
   },
-  "module": "dist/css-classname-hash.esm.js",
   "size-limit": [
     {
-      "path": "dist/css-classname-hash.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/css-classname-hash.esm.js",
-      "limit": "10 KB"
+      "path": "dist/index.js",
+      "limit": "180 KB"
     }
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.10.2",
-    "husky": "^5.2.0",
+    "@tsconfig/node14": "^1.0.0",
+    "@types/jest": "^26.0.23",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
     "size-limit": "^4.10.2",
-    "tsdx": "^0.14.1",
+    "ts-jest": "^26.5.5",
+    "ts-loader": "^8.2.0",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
+  },
+  "jest": {
+    "preset": "ts-jest"
   },
   "repository": {
     "type": "git",

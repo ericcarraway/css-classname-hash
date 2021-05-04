@@ -13,9 +13,14 @@
     "node": ">=10"
   },
   "scripts": {
+    "analyze": "size-limit --why",
     "build": "bash scripts/build.sh",
+    "clear_jest": "jest --clearCache",
     "lint": "echo TODO: re-enable linting",
+    "pre-publish": "bash scripts/pre-publish.sh",
     "prettier": "prettier './**/*.{ts,js}' --write",
+    "shipit": "bash scripts/publish.sh",
+    "size": "size-limit",
     "test": "npx jest"
   },
   "husky": {

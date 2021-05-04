@@ -5,18 +5,23 @@
   "description": "opinionated string hashing function for minifying CSS class names in Node.js, intended for use in front-end build systems",
   "license": "MIT",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "dist/index.js"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "npx tsc --project . && mv index.js ./dist/index.js",
+    "build": "bash scripts/build.sh",
     "lint": "echo TODO: re-enable linting",
     "test": "npx jest"
   },
-  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  },
   "prettier": {
     "printWidth": 80,
     "quoteProps": "consistent",
@@ -24,10 +29,19 @@
     "singleQuote": true,
     "trailingComma": "all"
   },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.2",
     "@tsconfig/node14": "^1.0.0",
     "@types/jest": "^26.0.23",
+    "husky": "^4.3.8",
     "jest": "^26.6.3",
+    "size-limit": "^4.10.2",
     "ts-jest": "^26.5.5",
     "ts-loader": "^8.2.0",
     "tslib": "^2.2.0",

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "checkJs": true,
-    "declaration": false,
+    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,

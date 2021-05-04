@@ -1,5 +1,5 @@
 {
-  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
     "alwaysStrict": true,
     "checkJs": true,
@@ -19,10 +19,9 @@
     "sourceMap": false,
     "strict": true,
     "target": "ES2017",
-
-    // allow the creation of sibling `.js` files when type-checking separately with `tsc`
-    // then, run the `clean` script to remove them
     "noEmit": false
   },
-  "exclude": ["*.js", "**/*.js"]
+  "files": ["index.ts"],
+  "ignore": ["node_modules"],
+  "exclude": ["node_modules", "*.js", "**/*.js"]
 }

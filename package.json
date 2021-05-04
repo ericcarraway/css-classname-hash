@@ -14,9 +14,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "npx webpack --mode production",
-    "check": "npx tsc index.ts",
-    "clean": "trash index.js",
+    "build": "npx tsc --project . && mv index.js ./dist/index.js",
     "test": "npx jest"
   },
   "peerDependencies": {},
@@ -28,6 +26,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
     "@types/jest": "^26.0.23",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.5",

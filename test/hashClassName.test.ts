@@ -1,4 +1,6 @@
 import hashClassName from '../index';
+// import hashClassName from '../dist/index.js';
+
 import TEST_DICTIONARY from './TEST_DICTIONARY';
 
 describe('hashClassName', () => {

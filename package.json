@@ -14,47 +14,31 @@
     "node": ">=10"
   },
   "scripts": {
-    "analyze": "size-limit --why",
-    "build": "tsdx build",
-    "clear_jest": "jest --clearCache",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "pre-publish": "bash scripts/pre-publish.sh",
-    "shipit": "bash scripts/publish.sh",
-    "size": "size-limit",
-    "start": "tsdx watch",
-    "test": "tsdx test"
+    "build": "npx webpack --mode production",
+    "check": "npx tsc index.ts",
+    "clean": "trash index.js",
+    "test": "npx jest"
   },
   "peerDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
   "prettier": {
     "printWidth": 80,
+    "quoteProps": "consistent",
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all"
   },
-  "module": "dist/css-classname-hash.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/css-classname-hash.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/css-classname-hash.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.10.2",
-    "husky": "^5.2.0",
-    "size-limit": "^4.10.2",
-    "tsdx": "^0.14.1",
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
+    "ts-loader": "^8.1.0",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
   },
   "repository": {
     "type": "git",

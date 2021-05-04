@@ -1,4 +1,4 @@
-import hashClassName from '../src';
+import hashClassName from '../index';
 import TEST_DICTIONARY from './TEST_DICTIONARY';
 
 describe('hashClassName', () => {

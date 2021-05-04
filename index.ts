@@ -1,5 +1,13 @@
 import { createHash } from 'crypto';
 
+// creates a base64-encoded md5 hash of the original class name
+// and removes chars that are invalid for CSS class names
+const md5 = (originalClassName: string) =>
+  createHash('md5')
+    .update(originalClassName)
+    .digest('base64')
+    .replace(/\/|\+|==/g, '');
+
 const TARGET_HASH_LENGTH: number = 4;
 
 const isLetter = (char: string): boolean => /[a-zA-Z]/.test(char);
@@ -39,12 +47,7 @@ const stringHasLessThanTwoLetters = (str: string): boolean => {
 };
 
 const hashClassName = (originalClassName: string): string => {
-  // create the base64-encoded md5 hash of the original class name
-  // and remove chars that are invalid for CSS class names
-  const rawHash: string = createHash('md5')
-    .update(originalClassName)
-    .digest('base64')
-    .replace(/\/|\+|==/g, '');
+  const rawHash: string = md5(originalClassName);
 
   let cssClass: string = '';
   let idx: number = 0;

@@ -16,7 +16,9 @@ describe('hashClassName', () => {
       });
     }
 
-    it('should have no hash collisions', () => {
+    it(`should have no hash collisions for ${Object.keys(
+      TEST_DICTIONARY,
+    ).length.toLocaleString()} unique keys`, () => {
       const values: string[] = Object.values(TEST_DICTIONARY);
       const uniqueValues: string[] = Array.from(new Set(values));
 

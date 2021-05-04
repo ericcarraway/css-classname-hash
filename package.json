@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "npx tsc --project . && mv index.js ./dist/index.js",
+    "lint": "echo TODO: re-enable linting",
     "test": "npx jest"
   },
   "peerDependencies": {},

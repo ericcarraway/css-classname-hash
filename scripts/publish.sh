@@ -7,6 +7,7 @@ package_name="@ericcarraway/css-classname-hash"
 registry_expected="https://registry.npmjs.org/"
 registry_actual=$(npm config get registry)
 
+npm run lint
 npm run build
 npm run test
 

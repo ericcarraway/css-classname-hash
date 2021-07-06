@@ -93,4 +93,27 @@ const hashClassName = (originalClassName: string): string => {
   return cssClass;
 };
 
-export default hashClassName;
+type Dictionary = { [key: string]: string };
+
+const hashClassNameWithCache = (
+  originalClassName: string,
+  dictionary?: Dictionary,
+): string => {
+  if (!dictionary) {
+    return hashClassName(originalClassName);
+  }
+
+  const cached = dictionary[originalClassName];
+
+  if (cached) {
+    return cached;
+  }
+
+  const cssClass = hashClassName(originalClassName);
+
+  dictionary[originalClassName] = cssClass;
+
+  return cssClass;
+};
+
+export default hashClassNameWithCache;

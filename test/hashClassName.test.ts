@@ -27,4 +27,18 @@ describe('hashClassName', () => {
       expect(values).toStrictEqual(uniqueValues);
     });
   });
+
+  it('should maintain a dictionary', () => {
+    const dictionary = {};
+
+    hashClassName('container', dictionary);
+    hashClassName('header', dictionary);
+    hashClassName('navigation', dictionary);
+
+    expect(dictionary).toStrictEqual({
+      container: `Xwtu`,
+      header: `CZ5l`,
+      navigation: `ZFgu`,
+    });
+  });
 });

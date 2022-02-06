@@ -8,7 +8,7 @@ const md5 = (originalClassName: string) =>
     .digest('base64')
     .replace(/\/|\+|==/g, '');
 
-const TARGET_HASH_LENGTH: number = 4;
+const TARGET_HASH_LENGTH: number = 5;
 
 const isLetter = (char: string): boolean => /[a-zA-Z]/.test(char);
 

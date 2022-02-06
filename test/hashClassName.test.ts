@@ -37,9 +37,9 @@ describe('hashClassName', () => {
     hashClassName('navigation', dictionary);
 
     expect(dictionary).toStrictEqual({
-      container: `Xwtu`,
-      header: `CZ5l`,
-      navigation: `ZFgu`,
+      container: `Xwtuv`,
+      header: `CZ5lT`,
+      navigation: `ZFgu9`,
     });
   });
 });

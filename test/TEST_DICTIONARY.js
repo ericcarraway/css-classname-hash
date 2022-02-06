@@ -1,4 +1,4 @@
-export const TEST_DICTIONARY = {
+const TEST_DICTIONARY = {
   'abs-bl': 'ntzr',
   'abs-br': 'T3ju',
   'abs-tl': 'ZtBD',
@@ -6930,3 +6930,5 @@ export const TEST_DICTIONARY = {
   'z-xl-50': 'PmpC',
   'z-xl-auto': 'wb4Y',
 };
+
+module.exports = { TEST_DICTIONARY };

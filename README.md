@@ -15,12 +15,12 @@ npm i --save-dev @ericcarraway/css-classname-hash
 const hashClassName = require('@ericcarraway/css-classname-hash').default;
 
 // an example BEM class name
-hashClassName('block-name__elem-name_mod-name_mod-val') // 'YMpS'
+hashClassName('block-name__elem-name_mod-name_mod-val') // 'YMpSk'
 
 // other examples
-hashClassName('container') // 'Xwtu'
-hashClassName('header') // 'CZ5l'
-hashClassName('navigation') // 'ZFgu'
+hashClassName('container') // 'Xwtuv'
+hashClassName('header') // 'CZ5lT'
+hashClassName('navigation') // 'ZFgu9'
 ```
 
 **DETAILS**
@@ -31,10 +31,7 @@ hashClassName('navigation') // 'ZFgu'
 
 3. Ensures that the hashed CSS class name
     - Starts with a letter
-    - Has at least two letters
-    - Has at least one lower case letter
-    - Has at least one upper case letter
-    - Is four characters long
+    - Is five characters long
 
 ---
 

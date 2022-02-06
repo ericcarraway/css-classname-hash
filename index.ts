@@ -22,11 +22,10 @@ const hashClassName = (originalClassName: string): string => {
 
   while (cssClass.length < TARGET_HASH_LENGTH) {
     const char: string = rawHash[idx];
-    const lastChar: string = cssClass[cssClass.length - 1];
 
     // our hashed CSS class name should start with a letter
     // and then continue with either a letter or digit
-    if (cssClass.length && isLetterOrNumber(char) && char !== lastChar) {
+    if (cssClass.length && isLetterOrNumber(char)) {
       cssClass = `${cssClass}${char}`;
     } else if (!cssClass.length && isLetter(char)) {
       cssClass = char;

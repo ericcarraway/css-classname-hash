@@ -31,7 +31,6 @@ hashClassName('navigation') // 'ZFgu'
 
 3. Ensures that the hashed CSS class name
     - Starts with a letter
-    - Has at least two letters
     - Has at least one lower case letter
     - Has at least one upper case letter
     - Is four characters long

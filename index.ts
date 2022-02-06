@@ -30,22 +30,6 @@ const capitalizeCharAtIndex = (str: string, idx: number): string =>
 const capitalizeRightmostLetter = (str: string): string =>
   capitalizeCharAtIndex(str, getIndexOfRightmostLetter(str));
 
-const stringHasLessThanTwoLetters = (str: string): boolean => {
-  let numberOfLetters: number = 0;
-
-  for (let i: number = 0; i < str.length; i += 1) {
-    if (isLetter(str[i])) {
-      numberOfLetters += 1;
-
-      if (numberOfLetters > 1) {
-        return false;
-      }
-    }
-  }
-
-  return true;
-};
-
 const hashClassName = (originalClassName: string): string => {
   const rawHash: string = md5(originalClassName);
 
@@ -66,18 +50,6 @@ const hashClassName = (originalClassName: string): string => {
     // else, skip `char`
 
     idx += 1;
-
-    // if this would be the last iteration
-    // and the number of letters is less than 2,
-    // remove the number we just added
-    // then iterate through the loop again
-    // until the string ends with a letter
-    if (
-      cssClass.length === TARGET_HASH_LENGTH &&
-      stringHasLessThanTwoLetters(cssClass)
-    ) {
-      cssClass = cssClass.slice(0, -1);
-    }
   }
 
   // if the hashed class name is all upper case,

@@ -1,7 +1,6 @@
 import hashClassName from '../index';
 // import hashClassName from '../dist/index.js';
-
-import TEST_DICTIONARY from './TEST_DICTIONARY';
+import { TEST_DICTIONARY } from './TEST_DICTIONARY';
 
 describe('hashClassName', () => {
   it('should be a function', () => {
@@ -15,6 +14,8 @@ describe('hashClassName', () => {
         const expected = val;
 
         expect(actual).toBe(expected);
+
+        expect(isValidClassName(actual)).toEqual(true);
       });
     }
 
@@ -42,3 +43,12 @@ describe('hashClassName', () => {
     });
   });
 });
+
+function isValidClassName(className: string): boolean {
+  // https://stackoverflow.com/questions/17924445/js-regex-to-test-find-an-invalid-css-classname-that-begins-with-numbers
+  if (!/^([a-z_]|-[a-z_-])[a-z\d_-]*$/i.test(className)) {
+    return false;
+  }
+
+  return true;
+}

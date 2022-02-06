@@ -32,14 +32,16 @@ describe('hashClassName', () => {
   it('should maintain a dictionary', () => {
     const dictionary = {};
 
+    hashClassName('block-name__elem-name_mod-name_mod-val', dictionary);
     hashClassName('container', dictionary);
     hashClassName('header', dictionary);
     hashClassName('navigation', dictionary);
 
     expect(dictionary).toStrictEqual({
-      container: `Xwtuv`,
-      header: `CZ5lT`,
-      navigation: `ZFgu9`,
+      'block-name__elem-name_mod-name_mod-val': 'YMpSk',
+      'container': `Xwtuv`,
+      'header': `CZ5lT`,
+      'navigation': `ZFgu9`,
     });
   });
 });

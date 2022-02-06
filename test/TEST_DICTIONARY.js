@@ -832,6 +832,7 @@ const TEST_DICTIONARY = {
   'card-progress-fg': 'ZKKul',
   'card-responsive-width': 'SHJFi',
   'card-subtitle': 'wrC5V',
+  'card-text__line-1': 'c50am',
   'card-text__line-2': 'JZxxv',
   'card-text': 'RAK2T',
   'card-time-wrap': 'jWtb7',

@@ -15,12 +15,12 @@ npm i --save-dev @ericcarraway/css-classname-hash
 const hashClassName = require('@ericcarraway/css-classname-hash').default;
 
 // an example BEM class name
-hashClassName('block-name__elem-name_mod-name_mod-val') // 'YMpS'
+hashClassName('block-name__elem-name_mod-name_mod-val') // 'YMpSk'
 
 // other examples
-hashClassName('container') // 'Xwtu'
-hashClassName('header') // 'CZ5l'
-hashClassName('navigation') // 'ZFgu'
+hashClassName('container') // 'Xwtuv'
+hashClassName('header') // 'CZ5lT'
+hashClassName('navigation') // 'ZFgu9'
 ```
 
 **DETAILS**
